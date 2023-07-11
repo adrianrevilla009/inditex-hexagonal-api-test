@@ -1,4 +1,4 @@
-package es.inditex.api.domain.data;
+package es.inditex.api.domain.data.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,8 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProductDto {
-
+public class ProductResponseDto {
     private Long productId;
 
     private Long brandId;
@@ -23,9 +22,5 @@ public class ProductDto {
 
     private Long priceList;
 
-    private int priority;
-
     private Double price;
-
-    private String currency;
 }

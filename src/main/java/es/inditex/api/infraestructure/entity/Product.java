@@ -1,5 +1,6 @@
 package es.inditex.api.infraestructure.entity;
 
+import es.inditex.api.domain.data.Currency;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,5 +35,5 @@ public class Product {
 
     private Double price;
 
-    private String currency; // TODO enum
+    private String currency;
 }

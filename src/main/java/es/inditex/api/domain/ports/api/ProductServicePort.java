@@ -1,16 +1,13 @@
 package es.inditex.api.domain.ports.api;
 
-import es.inditex.api.domain.data.ProductDto;
-
-import java.time.LocalDateTime;
+import es.inditex.api.domain.data.request.ProductRequestDto;
+import es.inditex.api.domain.data.response.ProductResponseDto;
 
 public interface ProductServicePort {
     /**
      * Get a product given some entry params
-     * @param productId
-     * @param brandId
-     * @param startDate
+     * @param productRequestDto
      * @return product data
      */
-    ProductDto getProductByBrandProductAndDate(Long productId, Long brandId, LocalDateTime startDate);
+    ProductResponseDto getProductByBrandProductAndDate(ProductRequestDto productRequestDto);
 }

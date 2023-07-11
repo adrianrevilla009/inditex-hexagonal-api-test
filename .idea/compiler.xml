@@ -7,16 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="inditex-hexagonal-api-test" />
+        <module name="api-test" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="inditex-hexagonal-api-test" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="inditex-hexagonal-api-test" options="-parameters" />
+      <module name="api-test" options="-parameters" />
     </option>
   </component>
 </project>
