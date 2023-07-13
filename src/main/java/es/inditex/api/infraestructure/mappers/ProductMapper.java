@@ -7,6 +7,10 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
-
+    /**
+     * Given a product transforms it to a productDto
+     * @param product
+     * @return ProductDto
+     */
     ProductDto productToProductDto(Product product);
 }

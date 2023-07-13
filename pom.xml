@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>inditex</groupId>
 	<artifactId>api-test</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-RC</version>
 	<name>inditex-hexagonal-api-test</name>
 	<description>Hexagonal arquitecture microservice for inditex code test</description>
 	<properties>
@@ -48,6 +48,12 @@
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
 			<version>1.4.2.Final</version>
+		</dependency>
+		<!-- SWAGGER -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.0.0-RC1</version>
 		</dependency>
 	</dependencies>
 
