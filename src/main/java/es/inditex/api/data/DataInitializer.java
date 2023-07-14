@@ -30,10 +30,10 @@ public class DataInitializer {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH.mm.ss");
 
-        Product p1 = new Product(1L, 1L, LocalDateTime.parse("2020-06-14-00.00.00", formatter), LocalDateTime.parse("2020-12-31-23.59.59", formatter) , 35455L, 0, 35.50, Currency.EUR.getValue());
-        Product p2 = new Product(2L, 1L, LocalDateTime.parse("2020-06-14-15.00.00", formatter), LocalDateTime.parse("2020-06-14-18.30.00", formatter) , 35455L, 1, 25.45, Currency.EUR.getValue());
-        Product p3 = new Product(3L, 1L, LocalDateTime.parse("2020-06-15-00.00.00", formatter), LocalDateTime.parse("2020-06-15-11.00.00", formatter) , 35455L, 1, 30.50, Currency.EUR.getValue());
-        Product p4 = new Product(4L, 1L, LocalDateTime.parse("2020-06-15-16.00.00", formatter), LocalDateTime.parse("2020-12-31-23.59.59", formatter) , 35455L, 1, 38.95, Currency.EUR.getValue());
+        Product p1 = new Product(1L, 35455L, 1L, LocalDateTime.parse("2020-06-14-00.00.00", formatter), LocalDateTime.parse("2020-12-31-23.59.59", formatter) , 1L, 0, 35.50, Currency.EUR.getValue());
+        Product p2 = new Product(2L, 35455L, 1L, LocalDateTime.parse("2020-06-14-15.00.00", formatter), LocalDateTime.parse("2020-06-14-18.30.00", formatter) , 2L, 1, 25.45, Currency.EUR.getValue());
+        Product p3 = new Product(3L, 35455L, 1L, LocalDateTime.parse("2020-06-15-00.00.00", formatter), LocalDateTime.parse("2020-06-15-11.00.00", formatter) , 3L, 1, 30.50, Currency.EUR.getValue());
+        Product p4 = new Product(4L, 35455L, 1L, LocalDateTime.parse("2020-06-15-16.00.00", formatter), LocalDateTime.parse("2020-12-31-23.59.59", formatter) , 4L, 1, 38.95, Currency.EUR.getValue());
 
 
         this.productRepository.saveAll(Arrays.asList(p1, p2, p3, p4));

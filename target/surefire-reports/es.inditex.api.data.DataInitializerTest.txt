@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: es.inditex.api.data.DataInitializerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 s - in es.inditex.api.data.DataInitializerTest

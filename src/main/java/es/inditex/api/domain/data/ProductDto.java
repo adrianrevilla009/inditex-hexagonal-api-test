@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
 @Builder
 public class ProductDto {
 
+    private Long id;
+
     private Long productId;
 
     private Long brandId;

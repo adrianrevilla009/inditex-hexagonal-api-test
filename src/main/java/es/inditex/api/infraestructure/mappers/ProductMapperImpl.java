@@ -7,6 +7,7 @@ public class ProductMapperImpl implements ProductMapper{
     @Override
     public ProductDto productToProductDto(Product product) {
         return ProductDto.builder()
+                .id(product.getId())
                 .productId(product.getProductId())
                 .brandId(product.getBrandId())
                 .startDate(product.getStartDate())

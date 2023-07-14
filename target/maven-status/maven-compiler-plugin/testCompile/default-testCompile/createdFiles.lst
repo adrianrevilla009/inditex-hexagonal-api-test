@@ -1,0 +1,8 @@
+es\inditex\api\data\DataInitializerTest.class
+es\inditex\api\domain\service\ProductServiceImplTest.class
+es\inditex\api\application\ProductControllerIntegrationTest.class
+es\inditex\api\application\ProductControllerTest.class
+es\inditex\api\application\ProductControllerIntegrationSpecifiedTest.class
+es\inditex\api\infraestructure\mappers\ProductMapperImplTest.class
+es\inditex\api\domain\service\mapper\ProductDtoMapperTest.class
+es\inditex\api\infraestructure\adapters\ProductJpaAdapterTest.class
