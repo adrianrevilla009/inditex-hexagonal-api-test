@@ -1,0 +1,26 @@
+name: Develop workflow
+
+on:
+  pull_request:
+    branches: [ develop ]
+    paths:
+      - 'src/**'
+      - 'pom.xml'
+  workflow_dispatch:
+  push:
+
+jobs:
+  package:
+    name: Build Java application and run test
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v2
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Package and run tests
+      run: mvn package
+      

@@ -1,0 +1,46 @@
+name: Master workflow
+
+on:
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'src/**'
+      - 'pom.xml'
+  workflow_dispatch:
+  push:
+
+jobs:
+  package:
+    name: Build Java application and run test
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v2
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Run test and package
+      run: mvn package
+      
+  build-artifact-dockerhub:
+    name: Build Java application and push the artifact to docker hub
+    needs: package
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v2
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+          
+    - name: Generate Docker image version-v1
+      run: mvn spring-boot:build-image -DskipTests -Dspring-boot.build-image.imageName=${{ secrets.DOCKERHUB_USERNAME }}/bcnc-interview:v1
+      
+    - name: Login to DockerHub
+      run: docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_TOKEN }}"
+    - name: Push image version-dev to DockerHub
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/bcnc-interview:v1
