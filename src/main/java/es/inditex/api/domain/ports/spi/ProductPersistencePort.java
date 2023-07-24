@@ -9,9 +9,9 @@ public interface ProductPersistencePort {
      * Get a product given some entry params
      * @param productId
      * @param brandId
-     * @param startDate
+     * @param applicationDate
      * @return product data
      */
-    ProductDto getProductByBrandProductAndDate(Long productId, Long brandId, LocalDateTime startDate);
+    ProductDto getProductByBrandProductAndDate(Long productId, Long brandId, LocalDateTime applicationDate);
 
 }

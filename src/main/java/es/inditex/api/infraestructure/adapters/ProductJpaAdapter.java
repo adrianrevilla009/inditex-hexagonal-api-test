@@ -22,9 +22,9 @@ public class ProductJpaAdapter implements ProductPersistencePort {
     }
 
     @Override
-    public ProductDto getProductByBrandProductAndDate(Long productId, Long brandId, LocalDateTime startDate) {
+    public ProductDto getProductByBrandProductAndDate(Long productId, Long brandId, LocalDateTime applicationDate) {
 
-        Optional<Product> product = productRepository.getProductByBrandProductAndDate(productId, brandId, startDate);
+        Optional<Product> product = productRepository.getProductByBrandProductAndDate(productId, brandId, applicationDate);
 
         if (product.isPresent()) {
             return productMapper.productToProductDto(product.get());

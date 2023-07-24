@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: es.inditex.api.domain.service.mapper.ProductDtoMapperTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 s - in es.inditex.api.domain.service.mapper.ProductDtoMapperTest

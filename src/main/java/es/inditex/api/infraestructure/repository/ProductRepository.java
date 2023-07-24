@@ -12,9 +12,9 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query(value = "SELECT * FROM Product p WHERE p.product_id = :productId AND p.brand_id = :brandId " +
-            "AND p.start_date = :startDate",
+            "AND :applicationDate BETWEEN p.start_date AND p.end_date ORDER BY p.priority LIMIT 1",
             nativeQuery = true)
     Optional<Product> getProductByBrandProductAndDate(@Param("productId") Long productId,
                                              @Param("brandId") Long brandId,
-                                             @Param("startDate") LocalDateTime startDate);
+                                             @Param("applicationDate") LocalDateTime applicationDate);
 }
